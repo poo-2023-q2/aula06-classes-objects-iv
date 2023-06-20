@@ -1,14 +1,25 @@
+/**
+ * Rectangle is an immutable object.
+ */
 public class Rectangle {
-    private final double x1;
-    private final double y1;
-    private final double x2;
-    private final double y2;
+    public final Point p1;
+    public final Point p2;
+    public final Point p3;
+    public final Point p4;
 
-    public Rectangle(double x1, double y1,
-        double x2, double y2) {
-        this.x1 = x1;
-        this.y1 = y1;
-        this.x2 = x2;
-        this.y2 = y2;
+    /***
+     * Construct an immutable rectangle. We assume P1 is the 
+     * left-top point, the remaining ones are ordered
+     * in clockwise sequence.
+     * @param p1 the first point (left-top)
+     * @param p2 the second point (right-top)
+     * @param p3 the third point (right-bottom)
+     * @param p4 the fourth point (left-bottom)
+     */
+    public Rectangle(Point p1, Point p2, Point p3, Point p4) {
+        this.p1 = p1;
+        this.p2 = p2;
+        this.p3 = p3;
+        this.p4 = p4;
     }
 }
